@@ -1,0 +1,129 @@
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python packaging
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+
+# Pytest / coverage / cache
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+
+# =========================
+# Environment / secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# Secrets / keys
+*.pem
+*.key
+*.crt
+
+# =========================
+# Local data / generated files
+# =========================
+data/retrieval_metrics.json
+data/evaluation_report.json
+
+# Optional: if you want to keep the dataset versioned, do NOT ignore it
+# If you do NOT want it in git, uncomment the next line:
+# data/evaluation_dataset.json
+
+# Logs
+*.log
+logs/
+*.out
+
+# =========================
+# Database / local runtime artifacts
+# =========================
+*.sqlite3
+*.db
+
+# Docker override / local-only compose files
+docker-compose.override.yml
+
+# =========================
+# OpenTelemetry / temp traces
+# =========================
+otel-collector-config.local.yaml
+*.trace
+*.traces
+
+# =========================
+# Jupyter / notebooks
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Mac / Linux temp files
+# =========================
+*.tmp
+*.temp
+.cache/
+
+# =========================
+# Redis / local dumps
+# =========================
+dump.rdb
+appendonly.aof
+
+# =========================
+# Node / frontend (for future UI minimal)
+# =========================
+node_modules/
+.next/
+out/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Frontend envs
+frontend/.env
+frontend/.env.*
+ui/.env
+ui/.env.*
+
+# =========================
+# Misc generated artifacts
+# =========================
+*.tar
+*.gz
+*.zip

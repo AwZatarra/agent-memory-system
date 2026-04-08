@@ -1,0 +1,31 @@
+[
+  {
+    "name": "tenant_1_playbook_visibility",
+    "agent_id": "agent-b",
+    "tenant_id": "tenant-1",
+    "query": "What playbooks are available for tenant-1?",
+    "top_k": 5,
+    "expected_titles": ["Shared playbook for tenant-1"],
+    "expected_memory_types": ["procedural"]
+  },
+  {
+    "name": "tenant_1_global_visibility",
+    "agent_id": "agent-b",
+    "tenant_id": "tenant-1",
+    "query": "What approved knowledge exists for tenant-1?",
+    "top_k": 5,
+    "expected_titles": ["Approved global memory"],
+    "expected_memory_types": ["semantic"]
+  },
+  {
+    "name": "private_memory_isolation",
+    "agent_id": "agent-b",
+    "tenant_id": "tenant-1",
+    "query": "Show private note for agent-a",
+    "top_k": 5,
+    "expected_titles": [],
+    "expected_memory_types": [],
+    "expect_no_relevant_results": true,
+    "max_allowed_top_score": 0.60
+  }
+]

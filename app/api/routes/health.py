@@ -1,0 +1,12 @@
+from fastapi import APIRouter
+
+router = APIRouter(tags=["health"])
+
+
+@router.get("/health")
+def health_check():
+    return {
+        "ok": True,
+        "service": "agent-memory-system",
+        "status": "healthy",
+    }
