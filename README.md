@@ -68,8 +68,8 @@ Además, el sistema soporta:
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/TU_USUARIO/TU_REPO.git
-cd TU_REPO
+git clone https://github.com/AwZatarra/agent-memory-system.git
+cd agent-memory-system
 ```
 
 ### 2. Crear el archivo `.env`
@@ -89,15 +89,34 @@ Copy-Item .env.example .env
 Ejemplo:
 
 ```env
-OPENAI_API_KEY=tu_api_key
-OPENAI_EMBEDDING_MODEL=text-embedding-3-small
-OPENAI_CHAT_MODEL=gpt-4.1-mini
+APP_NAME=Agent Memory System
+APP_ENV=development
+APP_PORT=8000
+
+POSTGRES_HOST=db
+POSTGRES_PORT=5432
+POSTGRES_DB=agent_memory
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
 
 DATABASE_URL=postgresql://postgres:postgres@db:5432/agent_memory
+
+OPENAI_API_KEY=api_key
+OPENAI_EMBEDDING_MODEL=text-embedding-3-small
+EMBEDDING_DIMENSIONS=1536
+ENABLE_EMBEDDINGS=true
+OPENAI_CHAT_MODEL=gpt-4.1-mini
+ENABLE_LLM_COMPACTION=true
 
 REDIS_HOST=redis
 REDIS_PORT=6379
 REDIS_DB=0
+SHORT_TERM_TTL_SECONDS=7200
+SHORT_TERM_MAX_MESSAGES=20
+SHORT_TERM_MAX_TOOL_CALLS=20
+
+OTEL_SERVICE_NAME=agent-memory-system
+OTEL_ENABLE_CONSOLE_EXPORTER=true
 ```
 
 ---
