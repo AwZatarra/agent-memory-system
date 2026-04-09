@@ -188,5 +188,5 @@ Este proyecto demuestra experiencia en:
 **Pool Rivera Molina**
 
 - LinkedIn: [Pool Rivera Molina](https://www.linkedin.com/in/pool-rivera-molina/)
-- GitHub: [Git Pool Rivera](https://github.com/AwZatarra)
+- GitHub: [poolriveramolina](https://github.com/AwZatarra)
 
