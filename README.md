@@ -1,56 +1,56 @@
-# 🧠 Sistema de Memoria para Agentes LLM
+# 🧠 Memory System for LLM Agents
 
-Backend que funciona como un **cerebro persistente para agentes**.
+Backend that works as a **persistent brain for agents**.
 
-Permite que uno o varios agentes puedan:
+It allows one or multiple agents to:
 
-- guardar conocimiento útil
-- recuperar contexto por similitud semántica
-- compartir memoria entre agentes
-- recordar decisiones previas
-- aprender con feedback
-- expirar, invalidar y versionar conocimiento
-- separar memoria de corto plazo y memoria de largo plazo
+- store useful knowledge
+- retrieve context through semantic similarity
+- share memory between agents
+- remember previous decisions
+- learn from feedback
+- expire, invalidate, and version knowledge
+- separate short-term memory from long-term memory
 
-En pocas palabras: este proyecto busca que los agentes **no empiecen de cero en cada ejecución**.
+In short: this project aims to ensure that agents **do not start from scratch on every execution**.
 
 ---
 
-## 🚀 Qué hace
+## 🚀 What it does
 
-El sistema combina dos tipos de memoria:
+The system combines two types of memory:
 
 ### Short-term memory
-Memoria temporal de sesión usando Redis.
+Temporary session memory using Redis.
 
-Ejemplos:
-- últimos mensajes
-- objetivo actual
-- estado de ejecución
-- herramientas usadas recientemente
+Examples:
+- latest messages
+- current goal
+- execution state
+- recently used tools
 
 ### Long-term memory
-Memoria persistente usando PostgreSQL + pgvector.
+Persistent memory using PostgreSQL + pgvector.
 
-Ejemplos:
-- hechos importantes
-- decisiones previas
-- incidentes
+Examples:
+- important facts
+- previous decisions
+- incidents
 - playbooks
-- conocimiento consolidado
+- consolidated knowledge
 
-Además, el sistema soporta:
+In addition, the system supports:
 
-- búsqueda semántica
-- ranking híbrido
-- feedback sobre memorias útiles o no útiles
-- compaction de memorias viejas
-- manejo de contradicciones
-- expiración de conocimiento obsoleto
+- semantic search
+- hybrid ranking
+- feedback on useful or non-useful memories
+- compaction of old memories
+- contradiction handling
+- expiration of obsolete knowledge
 
 ---
 
-## 🛠️ Tecnologías
+## 🛠️ Technologies
 
 - **Python**
 - **FastAPI**
@@ -63,30 +63,30 @@ Además, el sistema soporta:
 
 ---
 
-## 📦 Instalación
+## 📦 Installation
 
-### 1. Clonar el repositorio
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/AwZatarra/agent-memory-system.git
 cd agent-memory-system
 ```
 
-### 2. Crear el archivo `.env`
+### 2. Create the `.env` file
 
 ```bash
 cp .env.example .env
 ```
 
-En Windows PowerShell:
+On Windows PowerShell:
 
 ```powershell
 Copy-Item .env.example .env
 ```
 
-### 3. Completar variables importantes
+### 3. Fill in the important variables
 
-Ejemplo:
+Example:
 
 ```env
 APP_NAME=Agent Memory System
@@ -121,22 +121,22 @@ OTEL_ENABLE_CONSOLE_EXPORTER=true
 
 ---
 
-## ▶️ Cómo arrancarlo
+## ▶️ How to run it
 
-Levanta todo con Docker Compose:
+Start everything with Docker Compose:
 
 ```bash
 docker compose up --build
 ```
 
-Cuando termine de levantar:
+Once everything is up and running:
 
 - API: `http://localhost:8000`
 - Swagger: `http://localhost:8000/docs`
 
 ---
 
-# 📂 Estructura del proyecto
+# 📂 Project structure
 
 ```bash
 app/
@@ -159,34 +159,33 @@ README.md
 
 ---
 
-## 📌 Flujo general
+## 📌 General flow
 
-1. guardar memorias
-2. recuperar contexto relevante
-3. aplicar feedback
-4. versionar o invalidar conocimiento
-5. compactar memorias viejas
-6. seguir reutilizando conocimiento útil entre ejecuciones
+1. store memories
+2. retrieve relevant context
+3. apply feedback
+4. version or invalidate knowledge
+5. compact old memories
+6. continue reusing useful knowledge across executions
 
 ---
 
-## 💡 Valor del proyecto
+## 💡 Project value
 
-Este proyecto demuestra experiencia en:
+This project demonstrates experience in:
 
 - backend engineering
-- diseño de sistemas
+- system design
 - retrieval systems
-- memory systems para agentes
-- lifecycle de conocimiento
-- observabilidad y evaluación
+- memory systems for agents
+- knowledge lifecycle
+- observability and evaluation
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 
 **Pool Rivera Molina**
 
 - LinkedIn: [Pool Rivera Molina](https://www.linkedin.com/in/pool-rivera-molina/)
 - GitHub: [poolriveramolina](https://github.com/AwZatarra)
-
